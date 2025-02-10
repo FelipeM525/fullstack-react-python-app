@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const FavoritesPage = () => {
   const [favorites, setFavorites] = useState([]);
-
+ const apiUrl = import.meta.env.VITE_BASE_URL || 'http://localhost:8000'
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
     setFavorites(storedFavorites);
@@ -21,7 +21,7 @@ const FavoritesPage = () => {
             >
               <img
                 className="w-full h-64 object-cover rounded-t-lg"
-                src={`http://localhost:8000${item.photos[0].url}`}
+                src={`${apiUrl}${item.photos[0].url}`}
                 alt={item.title}
               />
               <div className="p-4 text-center">

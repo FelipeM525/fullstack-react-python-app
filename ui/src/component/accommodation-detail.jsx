@@ -1,6 +1,6 @@
 const AccomodationDetail = ({ accommodation, onClose }) => {
     if (!accommodation) return null;
-    const apiUrl = import.meta.env.VITE_BASE_URL
+    const apiUrl = import.meta.env.VITE_BASE_URL || 'http://localhost:8000'
     console.log(apiUrl)
     return (
         <div

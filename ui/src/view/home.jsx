@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import AccomodationDetail from "../component/accommodation-detail";
 
 const Home = () => {
-    const apiUrl = import.meta.env.VITE_BASE_URL
+     const apiUrl = import.meta.env.VITE_BASE_URL || 'http://localhost:8000'
 
     const [data, setData] = useState([]);
     const [notFound, setNotFound] = useState(false);
