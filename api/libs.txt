@@ -3,5 +3,5 @@ uvicorn
 sqlalchemy
 pydantic-settings
 psycopg2-binary
-aiofiles 
+aiofiles
 alembic
